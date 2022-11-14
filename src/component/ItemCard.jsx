@@ -18,7 +18,7 @@ export default class ItemCard extends Component {
                 </div>
             </div>
                
-            <Modal itemModal={item}/>
+            <Modal handleClick={handleClick} itemModal={item}/>
                 
             </>
       

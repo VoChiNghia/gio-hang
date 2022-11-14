@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Modal extends Component {
   render() {
-    const {itemModal} = this.props
+    const {itemModal,handleClick} = this.props
     return (
         <div class="modal fade" id={`exampleModal${itemModal.id}`} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -26,7 +26,7 @@ export default class Modal extends Component {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Thêm vào Giỏ hàng</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleClick(itemModal)}>Thêm vào Giỏ hàng</button>
             </div>
             </div>
         </div>
